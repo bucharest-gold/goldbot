@@ -21,4 +21,4 @@ if (configFile) {
     process.exit();
   }
 }
-GoldBot.bot(options);
+GoldBot.bot(options).connect();
