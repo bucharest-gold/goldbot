@@ -105,3 +105,33 @@ And here's how it's used.
 
     [17:19:48]  <lanceball>	bgoldbot: .echo hug tcrawley
     [17:20:09]  <bgoldbot>	lanceball: hug tcrawley
+
+## Testing Your Extensions
+
+Of course, you should write unit tests and all of that. But often, it's great
+just to see wtf is happening in real life when you run the bot. Let's say you
+are writing a new extension, and want to test it out on an IRC server for
+realsies, without actually committing/pushing/publishing your changes. Here's
+what you need to do.
+
+First clone the repository and use `npm link` to trick your system into
+using your development/testing version of the repository.
+
+    $ git clone https://github.com/bucharest-gold/goldbot
+    $ cd goldbot
+  	$ npm link
+
+In a new terminal in a temp directory write a config file that specifies
+a channel you want to use.
+
+    $ cd test-goldbot
+    $ cat > bot-config.json
+    {
+      "channel": "#my-fave-channel"
+    }
+    ^C
+
+That's the channel you're going to test in. Start the bot `$ goldbot bot-config.json`,
+then play around and see what appears in the terminal. See what appears in IRC.
+Then make changes, e.g. remove this line https://github.com/bucharest-gold/goldbot/blob/master/lib/extensions/urban-dictionary.js#L12.
+Restart bot and see what happens.
