@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo 'get your act together and write some tests' # tape test/*.js | tap-spec",
     "lint": "eslint test/*.js index.js",
-    "prepublish": "nsp check",
-    "coverage": "istanbul cover tape test/*.js"
+    "prepublish": "nsp check"
   },
   "preferGlobal": true,
   "bin": {
@@ -34,7 +33,6 @@
     "eslint-plugin-promise": "*",
     "eslint-plugin-react": "*",
     "eslint-plugin-standard": "*",
-    "istanbul": "*",
     "nsp": "*",
     "tap-spec": "*",
     "tape": "*"
@@ -52,7 +50,7 @@
   ],
   "dependencies": {
     "daemon": "~1.1.0",
-    "irc": "~0.5.0",
-    "roi": "~0.13.0"
+    "irc": "~0.5.2",
+    "roi": "~0.15.0"
   }
 }

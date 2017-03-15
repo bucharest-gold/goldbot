@@ -1,3 +1,4 @@
+'use strict';
 
 const bot = require('./lib/bot');
 
