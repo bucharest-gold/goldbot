@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo 'get your act together and write some tests' # tape test/*.js | tap-spec",
     "lint": "eslint test/*.js index.js",
-    "prepublish": "nsp check"
+    "prepublish": "nsp check",
+    "start": "./start.sh"
   },
   "preferGlobal": true,
   "bin": {
