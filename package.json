@@ -7,7 +7,7 @@
     "test": "echo 'get your act together and write some tests' # tape test/*.js | tap-spec",
     "lint": "eslint test/*.js index.js",
     "prepublish": "nsp check",
-    "start": "./start.sh"
+    "start": "node bgoldbot.js bot-config.json"
   },
   "preferGlobal": true,
   "bin": {
